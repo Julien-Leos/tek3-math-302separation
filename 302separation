@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+import sys
+import parsing
+import core
+
+sys.argv.pop(0)
+parsedArgs = parsing.parse(sys.argv)
+core = core.Core(parsedArgs)
+
+if len(sys.argv) == 2:
+    core.matrixAlgorithm()
+    core.displayMatrixAlgorithm()
+else:
+    core.linkAlgorithm()
+    core.displayLinkAlgorithm()
